@@ -1,154 +1,181 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  outline: 0;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    
 }
 
 body {
-  font-family: sans-serif;  
-  background: rgb(238, 174, 202);
-  background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%,rgba(148, 187, 233, 1) 100%);
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(241, 153, 112)) ;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+hr {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    opacity:0.2 ;
+}
+
+h1 {
+    margin-top:50px
+}
+
+.center {
+    display: block;
+}
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#home h1 {
+    margin:10px;
+    padding:5px 10px;
+}
+/* --------------------- Top To Home -------------------- */
+
+#top {
+    display:inline-block;
+    background-color: #3f3d3d5d;
+    padding: 15px;
+    font-size:larger;
+    border-radius: 8px;
+    position:fixed;
+    bottom:30px;
+    right:30px;
+}
+
+ /* ----------------------- Header ---------------------- */
+header {
+    background-image: linear-gradient( rgba(241, 153, 112, 0.473), rgb(255, 255, 255)) ;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+header > h1 {
+    text-align: center;
+}
+
+
+/* --------------------- Navigation --------------------- */
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #ff7a4e;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1px 60px rgba(68, 65, 65, 0.322);
 }
 
 a {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 17px;
+    flex-basis: 150px;
+    color: rgb(32, 31, 31);
 }
 
+nav > a:hover {
+    background-color: #3f3d3d;
+    color: white;
+    text-decoration:none;
+
+}
+
+/* ------------------------ Diwali Wish ------------------------ */
+.wish {
+    width: 90%;
+    margin: 70px auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.wish > img {
+    width: 40%;
+}
+
+/* -------------------- Diwali Quotes ------------------- */
 .container {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  place-items: center;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+    
 }
 
-.calculator {
-  position: relative;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 30px 2px #8a817c;
+.items{
+    background-color: rgb(230, 233, 235);
+    border-radius: 12px;
+    width: 250px;
+    height: 300px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(112, 110, 110, 0.171) ;
+    overflow: auto;
+    margin: 15px;
 }
 
-.theme-toggler {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  color: #fff;
-  cursor: pointer;
-  z-index: 1;
+.items:hover {
+    box-shadow: 10px 10px 30px #ff7a4e ;
 
-  &::before {
-    content: "";
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background-color: #333;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-  }
+}
+/* ------------------- Diwali Pictures ------------------ */
+.container2 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
 }
 
-.theme-toggler.active {
-  color: #333;
-
-  &::before {
-    background-color: #fff;
-  }
+.pics {
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
 }
 
-#display {
-  margin: 0 10px;
-  height: 150px;
-  width: auto;
-  max-width: 270px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: 30px;
-  margin-bottom: 20px;
-  overflow-x: scroll;
+.pics:hover {
+    box-shadow: 10px 10px 30px #ff7a4e ;
+
 }
 
-#display::-webkit-scrollbar {
-  display: block;
-  height: 3px;
+/* ----------------------- Others ----------------------- */
+h1 {
+    text-align: center;
 }
 
-button {
-  height: 60px;
-  width: 60px;
-  border: 0;
-  border-radius: 30px;
-  margin: 5px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 200ms ease;
+/* -------------------- Footer ------------------- */
 
-  &:hover {
-    transform: scale(0.9);
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -o-transform: scale(0.9);
-  }
+footer {
+    text-align: center;
+    background-color: #3f3d3d;
+    color: white;
+    padding: 20px 0;
 }
 
-.calculator {
-  background-color: #f0f0f0;
-}
-.calculator #display {
-  color: #0a1e23;
-}
-.calculator button#clear {  
-  color: #fff;
-}
-.calculator button.btn-number {
-  background-color: #339989;
-  color: #7de2d1;
-}
-.calculator button.btn-operator {
-  background-color: #b6a6ca;
-  color: #f1e4f3;
-}
-.calculator button.btn-equal {
-  background-color: #19647e;
-  color: #eee5e5;
-}
+/* -------------------- Media Queries ------------------- */
 
-/* dark theme */
-.calculator.dark {
-  background-color: #071115;
-}
-.calculator.dark #display {
-  color: #f8fafd;
-}
-.calculator.dark button#clear {
-  background-color: #785964;
-  color: #d5c7bc;
-}
-.calculator.dark button.btn-number {
-  background-color: #3a606e;
-  color: #f8fafb;
-}
-.calculator.dark button.btn-operator {
-  background-color: #afbfc0;
-  color: #4e8098;
-}
-.calculator.dark button.btn-equal {
-  background-color: #566246;
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        position: relative;
+    }
+
+    a {
+        flex-basis: 50px;
+    }
 }
